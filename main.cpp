@@ -56,7 +56,7 @@ void game_start(){
         getline(cin, resp);
 
         // security :
-        while(!(in(resp, possibilites, nb_possibilities))){ // tant que resp n'est pas dans le tableau des possibilites
+        while(!(in(resp, possibilites, nb_possibilities)) || (player_bullets <= 0 && resp == "shoot")){ // tant que resp n'est pas dans le tableau des possibilites
             cout << "That's not a good answer !" << endl << "retry --> ";
             getline(cin, resp);
         }
@@ -66,7 +66,7 @@ void game_start(){
         if(ia_bullets > 0) {
             ia_choice = possibilites[rand()%3];  // random choice max 2 
         }
-        cout << "IA plays " << ia_choice << endl;
+        cout << "\nIA plays " << ia_choice << endl;
 
 
         // get the results:
