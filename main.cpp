@@ -36,7 +36,6 @@ int result(string player, string ia){
 
 void game_start(){
     srand((unsigned int) time(0)); // permet random number
-    cout << "test0" << endl;
     cout << "\n\nFINE, lets start !" << endl;
 
     const int nb_possibilities = 3;
@@ -51,7 +50,7 @@ void game_start(){
     bool retry = true;
 
     while(retry) {
-        cout << "\n-- you have " << player_bullets << " --" << endl;
+        cout << "\n-- you have " << player_bullets << " bullets --" << endl;
         cout << "\nPlease choose your action (\"shield\", \"bullet\", \"shoot\")" << endl;
         cout << "--> ";
         getline(cin, resp);
