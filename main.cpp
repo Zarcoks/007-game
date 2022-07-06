@@ -35,22 +35,15 @@ int result(string player, string ia){
 }
 
 void game_start(){
-    cout << "test-1" << endl;
     srand((unsigned int) time(0)); // permet random number
     cout << "test0" << endl;
     cout << "\n\nFINE, lets start !" << endl;
 
-    cout << "test" << endl;
     const int nb_possibilities = 3;
-    cout << "test1" << endl;
     string possibilites[nb_possibilities];
-    cout << "test2" << endl;
     possibilites[0] = "shield"; possibilites[1] = "bullet"; possibilites[2] = "shoot";
-    cout << "test3" << endl;
     string resp("");
-    cout << "test4" << endl;
     string ia_choice("");
-    cout << "test5" << endl;
 
     int player_bullets = 0;
     int ia_bullets = 0;
@@ -119,7 +112,6 @@ void game_start(){
 }
 
 void preview(){
-    cout << "TEST ULTIME" << endl;
     cout << "\nHey, welcome to my program !" << endl;
     cout << "\nDo you know what 007 game is ?" << endl;
     cout << "\nYou have 3 choices : you choose between \"bullet reload\", \"shield\", and \"shoot\" " << endl;
