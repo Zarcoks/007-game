@@ -50,7 +50,7 @@ void game_start(){
     bool retry = true;
 
     while(retry) {
-        cout << "\n-- you have " << player_bullets << " bullets --" << endl;
+        cout << "\n\n-- you have " << player_bullets << " bullets --" << endl;
         cout << "\nPlease choose your action (\"shield\", \"bullet\", \"shoot\")" << endl;
         cout << "--> ";
         getline(cin, resp);
