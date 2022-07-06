@@ -35,22 +35,31 @@ int result(string player, string ia){
 }
 
 void game_start(){
+    cout << "test-1" << endl;
     srand((unsigned int) time(0)); // permet random number
-
+    cout << "test0" << endl;
     cout << "\n\nFINE, lets start !" << endl;
 
+    cout << "test" << endl;
     const int nb_possibilities = 3;
+    cout << "test1" << endl;
     string possibilites[nb_possibilities];
+    cout << "test2" << endl;
     possibilites[0] = "shield"; possibilites[1] = "bullet"; possibilites[2] = "shoot";
+    cout << "test3" << endl;
     string resp("");
+    cout << "test4" << endl;
     string ia_choice("");
+    cout << "test5" << endl;
 
     int player_bullets = 0;
     int ia_bullets = 0;
     
     bool retry = true;
-    while (retry){
-        cout << "Please choose your action (\"shield\", \"bullet\", \"shoot\")" << endl;
+
+    while(retry) {
+        cout << "\n-- you have " << player_bullets << " --" << endl;
+        cout << "\nPlease choose your action (\"shield\", \"bullet\", \"shoot\")" << endl;
         cout << "--> ";
         getline(cin, resp);
 
@@ -64,9 +73,6 @@ void game_start(){
         ia_choice = "bullet";
         if(ia_bullets > 0) {
             ia_choice = possibilites[rand()%3];  // random choice max 2 
-        }
-        else {
-            ia_choice = possibilites[rand()%2];  // random choice max 1 
         }
         cout << "IA plays " << ia_choice << endl;
 
@@ -101,6 +107,7 @@ void game_start(){
         
         default: // error case
             cout << "SWITCH ERROR";
+            retry = false;
             break;
         }
 
@@ -112,14 +119,15 @@ void game_start(){
 }
 
 void preview(){
-    cout << "Hey, welcome to my program !" << endl;
-    cout << "Do you know what 007 game is ?" << endl;
-    cout << "You have 3 choices : you choose between \"bullet reload\", \"shield\", and \"shoot\" " << endl;
-    cout << "At beginning, you have 0 bullets, this is why you have to reload one." << endl;
-    cout << "Your goal is to shoot you ennemy, when he is not wearing a shield, and same for your ennemy !" << endl;
-    cout << "When you have 10 bullets, then you can shoot a mega bullet that will kill your ennemy, you can't so shield every round !" << endl;
-    cout << "Is it good ? Let's play with the IA ^^" << endl;
-    cout << "Are you ready?" << endl;
+    cout << "TEST ULTIME" << endl;
+    cout << "\nHey, welcome to my program !" << endl;
+    cout << "\nDo you know what 007 game is ?" << endl;
+    cout << "\nYou have 3 choices : you choose between \"bullet reload\", \"shield\", and \"shoot\" " << endl;
+    cout << "\nAt beginning, you have 0 bullets, this is why you have to reload one." << endl;
+    cout << "\nYour goal is to shoot you ennemy, when he is not wearing a shield, and same for your ennemy !" << endl;
+    cout << "\nWhen you have 10 bullets, then you can shoot a mega bullet that will kill your ennemy, you can't so shield every round !" << endl;
+    cout << "\nIs it good ? Let's play with the IA ^^" << endl;
+    cout << "\n\nAre you ready?" << endl;
     cout << "--> ";
     string unsusefull_variable("");
     getline(cin, unsusefull_variable);
